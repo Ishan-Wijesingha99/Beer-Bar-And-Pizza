@@ -3,7 +3,7 @@ const { Gallery, Painting } = require('../models');
 
 
 
-// GET requests
+// all GET requests
 router.get('/', async (req, res) => {
 
 })
