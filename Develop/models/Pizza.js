@@ -30,3 +30,5 @@ Pizza.init(
     modelName: 'pizza',
   }
 )
+
+module.exports = Pizza

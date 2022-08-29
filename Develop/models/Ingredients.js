@@ -28,3 +28,5 @@ Ingredients.init(
     modelName: 'ingredients',
   }
 )
+
+module.exports = Ingredients

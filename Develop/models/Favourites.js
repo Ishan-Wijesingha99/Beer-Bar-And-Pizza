@@ -28,3 +28,5 @@ Favourites.init(
     modelName: 'favourites',
   }
 )
+
+module.exports = Favourites
