@@ -16,7 +16,7 @@ Favourites.init(
       allowNull: false,
     },
     price : {
-      type: DataTypes.String,
+      type: DataTypes.STRING,
       allowNull: false,
     },
   },
