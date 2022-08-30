@@ -1,12 +1,47 @@
 <h1>Create an account</h1>
 
-<form action="/createaccount.html">
-  <input type="Email address" id="email" name="email" value="John"><br>
-  <input type="text" id="name" name="name" value="Name"><br>
-  <input type="text" id="address" name="address" value="Address"><br>
-  <input type="text" id="mobile" name="mobile" value="Mobile number"><br>
-  <input type="password" id="password" name="password" value="Password"><br>
-  <input type="password" id="password" name="repeatpassword" value="Repeat assword"><br>
+<form id="registerForm">
+  <input type="email" id="email" name="email" placeholder="email"><br>
+  <input type="text" id="name" name="name" placeholder="Name"><br>
+  <input type="text" id="address" name="address" placeholder="Address"><br>
+  <input type="number" id="mobile" name="mobile" placeholder="Mobile number"><br>
+  <input type="password" id="password" name="password" placeholder="Password"><br>
+  <input type="password" id="repeatPassword" name="repeatpassword" placeholder="Repeat password" pattern=".{8,}" title="password must be at least 8 or more characters"><br>
   <label>By creating an account I agree to the terms and conditions and privacy policy</label>
   <input type="submit" value="Sign Up">
 </form> 
+
+
+<script>
+const registerForm = document.querySelector('#registerForm');
+registerForm.addEventListener('submit',async(event)=>{
+  event.preventDefault();
+
+  const email = document.querySelector('#email').value.trim();
+  const name = document.querySelector('#name').value.trim();
+  const address = document.querySelector('#address').value.trim();
+  const mobile = document.querySelector('#mobile').value.trim();
+  const password = document.querySelector('#password').value.trim();
+  const repeatPassword = document.querySelector('#repeatPassword').value.trim();
+
+  if (password === password) {
+    const response = await fetch('/register', {
+      method: 'POST',
+      body: JSON.stringify({ email,name,address,mobile,password }),
+      headers: { 'Content-Type': 'application/json' },
+  
+    });
+
+    if (response.ok) {
+      document.location.replace('/');
+    } else {
+      alert('Failed to log in');
+    }
+  }
+  else(
+    alert("Passwords do not match, please reenter again")
+  )
+
+})
+
+</script>

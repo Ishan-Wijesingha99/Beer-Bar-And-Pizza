@@ -7,11 +7,13 @@ const { Beer, Favourites, Ingredients, Pizza, User } = require('../models');
 
 // home page
 router.get('/', async (req, res) => {
-    res.status(200).render('homepage')
+    res.status(200).send('Home page')
 })
 
 
-
+router.get('/register', async (req, res) => {
+    res.status(200).render('register.handlebars')
+})
 
 
 
