@@ -7,3 +7,50 @@
 }
 
 
+
+/* header */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FF5931;
+  padding: 10px;
+}
+
+.nav-left-side {
+  color: white;
+  text-shadow: 1px 1px 15px #000000;
+}
+
+.nav-right-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#fav-star {
+  height: 30px;
+  margin: 5px;
+}
+
+#cart-icon {
+  margin: 5px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px;
+  background-color: #715CF0;
+  color: white;
+  border: 2px black solid;
+}
+
+.hamburger-span {
+  width: 40px;
+  height: 8px;
+  margin: 5px;
+  background-color: white;
+  display: block;
+  border: 2px black solid;
+}
+
+
+
