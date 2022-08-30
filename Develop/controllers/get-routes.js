@@ -10,7 +10,9 @@ router.get('/', async (req, res) => {
     res.status(200).render('homepage')
 })
 
-
+router.get('/menu', async (req, res) => {
+    res.status(200).render('menu')
+})
 
 
 
