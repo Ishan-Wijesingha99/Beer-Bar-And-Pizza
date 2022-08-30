@@ -21,8 +21,8 @@ registerForm.addEventListener('submit',async(event)=>{
   const name = document.querySelector('#name').value.trim();
   const address = document.querySelector('#address').value.trim();
   const mobile = document.querySelector('#mobile').value.trim();
-  const password = document.querySelector('#password').value.trim();
-  const repeatPassword = document.querySelector('#repeatPassword').value.trim();
+  const password = document.querySelector('#password');
+  const repeatPassword = document.querySelector('#repeatPassword');
 
   if (password === password) {
     const response = await fetch('/register', {
