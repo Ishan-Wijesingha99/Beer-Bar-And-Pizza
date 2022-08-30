@@ -1,8 +1,8 @@
 const User = require('./User');
-const Ingredients = require('./Ingredients');
+const Ingredients = require('./Ingredient');
 const Beer = require('./Beer');
 const Pizza = require('./Pizza');
-const Favourites = require('./Favourites');
+const Favourites = require('./Favourite');
 
 Pizza.hasMany(Ingredients, {
   foreignKey: 'pizza_id',
