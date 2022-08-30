@@ -7,7 +7,14 @@ const { Beer, Favourites, Ingredients, Pizza, User } = require('../models');
 
 // home page
 router.get('/', async (req, res) => {
-    res.status(200).render('homepage')
+    
+    try {
+        res.status(200).render('homepage')   
+    } catch (error) {
+        console.log(error)
+        return res.status(400).json(error)
+    }
+
 })
 
 
