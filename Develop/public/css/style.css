@@ -15,11 +15,12 @@
   justify-content: space-between;
   background-color: #FF5931;
   padding: 10px;
+  margin-bottom: 50px;
 }
 
 .nav-left-side {
   color: white;
-  text-shadow: 1px 1px 15px #000000;
+  text-shadow: 1px 1px 5px #000000;
 }
 
 .nav-right-side {
@@ -50,6 +51,31 @@
   background-color: white;
   display: block;
   border: 2px black solid;
+}
+
+/* footer */
+.main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #FF5931;
+  margin-top: 50px;
+  padding: 20px;
+}
+
+#call-number {
+  margin: 10px;
+  color: white;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+#support-email {
+  margin: 10px;
+  color: white;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 5px #000000;
 }
 
 
