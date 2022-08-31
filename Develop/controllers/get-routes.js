@@ -1,8 +1,5 @@
-const router = require('express').Router();
-const { Beer, Favourites, Ingredients, Pizza, User } = require('../models');
-const session = require('express-session');
-
-
+const router = require("express").Router();
+const { Beer, Favourites, Ingredients, Pizza, User } = require("../models");
 
 // all GET requests
 
@@ -15,7 +12,7 @@ router.get('/', async (req, res) => {
         console.log(error)
         return res.status(400).json(error)
     }
-
+    
 })
 
 // pizza menu page
@@ -26,7 +23,7 @@ router.get('/pizza', async (req, res) => {
         const pizza = pizzaData.map((pizza) => pizza.get({ plain: true }));
         console.log(pizza);
         res.render('pizza', { pizza });
-      });
+});
 
 //pizza by id
 router.get('/pizza/:id', async (req, res) => {
@@ -42,6 +39,7 @@ router.get('/pizza/:id', async (req, res) => {
       } catch (err) {
           res.status(500).json(err);
       };     
+
   });
 
   //pizza registration page
@@ -53,8 +51,10 @@ router.get('/register', async (req,res)=>{
 
 )
 
-
-
-
+      
+// login page
+router.get("/login", async (req, res) => {
+  res.status(200).render("login");
+});
 
 module.exports = router;

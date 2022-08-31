@@ -11,11 +11,11 @@ Pizza.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    pizza_name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    description: {
+    pizza_description: {
       type: DataTypes.STRING,
     },
     price : {
