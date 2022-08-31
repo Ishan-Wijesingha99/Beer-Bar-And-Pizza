@@ -1,5 +1,6 @@
 const router = require('express').Router();
 const { Beer, Favourites, Ingredients, Pizza, User } = require('../models');
+const session = require('express-session');
 
 
 
@@ -42,6 +43,17 @@ router.get('/pizza/:id', async (req, res) => {
           res.status(500).json(err);
       };     
   });
+
+  //pizza registration page
+router.get('/register', async (req,res)=>{
+       res.render('register');
+
+}
+
+
+)
+
+
 
 
 
