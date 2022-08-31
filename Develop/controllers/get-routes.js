@@ -7,7 +7,14 @@ const { Beer, Favourites, Ingredients, Pizza, User } = require('../models');
 
 // home page
 router.get('/', async (req, res) => {
-    res.status(200).render('homepage')
+    
+    try {
+        res.status(200).render('homepage')   
+    } catch (error) {
+        console.log(error)
+        return res.status(400).json(error)
+    }
+
 })
 router.get('/home', async (req, res) => {
     res.status(200).render('homepage')
@@ -19,8 +26,31 @@ router.get('/login', async (req, res) => {
 
 
 
+// pizza menu page
+router.get('/pizza', async (req, res) => {
+    const pizzaData = await Pizza.findAll().catch((err) => { 
+        res.json(err);
+      });
+        const pizza = pizzaData.map((pizza) => pizza.get({ plain: true }));
+        console.log(pizza);
+        res.render('pizza', { pizza });
+      });
 
-
+//pizza by id
+router.get('/pizza/:id', async (req, res) => {
+    try{ 
+        const pizzaData = await Pizza.findByPk(req.params.id);
+        if(!pizzaData) {
+            res.status(404).json({message: 'No dish with this id!'});
+            return;
+        }
+        const pizza = pizzaData.get({ plain: true });
+        console.log(pizza);
+        res.render('pizza', pizza);
+      } catch (err) {
+          res.status(500).json(err);
+      };     
+  });
 
 
 
