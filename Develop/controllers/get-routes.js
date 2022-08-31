@@ -1,7 +1,5 @@
-const router = require('express').Router();
-const { Beer, Favourites, Ingredients, Pizza, User } = require('../models');
-
-
+const router = require("express").Router();
+const { Beer, Favourites, Ingredients, Pizza, User } = require("../models");
 
 // all GET requests
 
@@ -41,9 +39,10 @@ router.get('/pizza/:id', async (req, res) => {
       } catch (err) {
           res.status(500).json(err);
       };     
+      
+// login page
+router.get("/login", async (req, res) => {
+  res.status(200).render("login");
 });
 
-
-
 module.exports = router;
-

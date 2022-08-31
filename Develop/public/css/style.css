@@ -60,6 +60,47 @@
   border: 2px black solid;
 }
 
+<<<<<<< HEAD
+/* CARDS */
+.card {
+  margin: 20px;
+  flex: 0 1 300px;
+  border: 7px double var(--dark);
+  border-radius: 10px;
+  background-color: var(--light);
+  color: var(--dark);
+}
+
+.login-card {
+  margin: 0 0 20px 0;
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 5px;
+  border: 3px solid var(--dark);
+  border-radius: var(--border-radius);
+  border-style: double;
+  border-width: thick;
+  background-color: rgb(31, 76, 198);
+  color: var(--light);
+  justify-content:space-between;
+}
+
+.card header {
+  color: var(--light);
+  font-weight: bold;
+  text-transform: uppercase;
+  margin: 0;
+  background-color: var(--tertiary);
+  padding: 0.625rem;
+  border-radius: calc(0.18rem - 1px) calc(0.18rem - 1px) 0 0;
+}
+
+.card-body {
+  font-size: 1.4rem;
+  text-align: center;
+  font-weight: bold;
+}
+=======
 /* footer */
 .main-footer {
   display: flex;
@@ -135,5 +176,34 @@
   margin-top: 100px;
 }
 
+>>>>>>> 56fa390f56a1ee67989aac7ceff36462846af1b9
 
 
+/* LAYOUT */
+.container {
+  display: flex;
+
+  /* flex-flow: column wrap; */
+  /* align-content: flex-start; */
+  justify-content:space-between;
+  margin: 0 auto;
+  width: 90%;
+  
+}
+
+nav {
+  display: flex;
+  background-color: var(--secondary);
+}
+
+nav a {
+  color: var(--light);
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+nav a:hover {
+  color: var(--secondary);
+  background-color: var(--dark);
+}
