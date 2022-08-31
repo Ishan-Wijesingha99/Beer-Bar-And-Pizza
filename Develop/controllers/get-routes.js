@@ -39,6 +39,18 @@ router.get('/pizza/:id', async (req, res) => {
       } catch (err) {
           res.status(500).json(err);
       };     
+
+  });
+
+  //pizza registration page
+router.get('/register', async (req,res)=>{
+       res.render('register');
+
+}
+
+
+)
+
       
 // login page
 router.get("/login", async (req, res) => {
