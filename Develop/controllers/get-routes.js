@@ -14,8 +14,9 @@ router.get('/', async (req, res) => {
 router.get('/register', async (req, res) => {
     res.status(200).render('register.handlebars')
 })
-
-
+router.post('/register', async (req, res) => {
+    res.status(200).send(req.body);
+})
 
 module.exports = router;
 
