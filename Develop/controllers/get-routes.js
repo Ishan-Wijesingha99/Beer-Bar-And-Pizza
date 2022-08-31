@@ -19,10 +19,10 @@ router.get('/', async (req, res) => {
 router.get('/pizza', async (req, res) => {
     const pizzaData = await Pizza.findAll().catch((err) => { 
         res.json(err);
-      });
-        const pizza = pizzaData.map((pizza) => pizza.get({ plain: true }));
-        console.log(pizza);
-        res.render('pizza', { pizza });
+    });
+    const pizza = pizzaData.map((pizza) => pizza.get({ plain: true }));
+    console.log(pizza);
+    res.render('pizza', { pizza });
 });
 
 //pizza by id
@@ -36,13 +36,24 @@ router.get('/pizza/:id', async (req, res) => {
         const pizza = pizzaData.get({ plain: true });
         console.log(pizza);
         res.render('pizza', pizza);
-      } catch (err) {
+    } catch (err) {
           res.status(500).json(err);
+
       };     
-    })   
+    })      
+//pizza registration page
+router.get('/register', async (req,res)=>{
+    res.render('register');
+
+})
+
+
 // login page
 router.get("/login", async (req, res) => {
   res.status(200).render("login");
 });
 
+
+
 module.exports = router;
+
