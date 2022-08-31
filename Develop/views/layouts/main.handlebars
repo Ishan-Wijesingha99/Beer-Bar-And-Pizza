@@ -16,7 +16,7 @@
 
   <body>
     <nav class="navbar">
-      <h2 class="nav-left-side">Beer Bar and Pizza</h2>
+      <a class="nav-left-side" href="/">Beer Bar and Pizza</a>
 
       <div class="nav-right-side">
         <img
@@ -25,7 +25,7 @@
           alt="favourites-star-navbar"
         />
 
-        <a id="cart-icon" href="/favourites">CART</a>
+        <a id="cart-icon" href="/cart">CART</a>
 
         <div class="hamburger-icon">
           <span class="hamburger-span"></span>
@@ -34,17 +34,60 @@
         </div>
       </div>
     </nav>
-    <nav>
-      <a href="/">Home</a>
-      {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
-      {{else}}
-        <a href="/login">Login</a>
-      {{/if}}
-    </nav>
 
-    
+    <div class="drop-down-menu hidden">
+      <div class="drop-down-flex-container">
 
+        <a 
+        class="drop-down-link"
+        style="color: white;"
+        href="/login"
+        >
+
+        {{#if loggedIn}}
+          <a 
+          class="drop-down-link"
+          style="color: white;"
+          id="logout"
+          >LOG OUT</a>
+        {{else}}
+          <a 
+          class="drop-down-link"
+          style="color: white;"
+          href="/login"
+          >LOG IN / SIGN UP</a>
+        {{/if}}
+
+        <a
+        class="drop-down-link"
+        style="color: white;"
+        href="/menu"
+        >MENU</a>
+
+        <a
+        class="drop-down-link"
+        style="color: white;"
+        href="/aboutus"
+        >ABOUT US</a>
+
+        <a
+        class="drop-down-link"
+        style="color: white;"
+        href="/contactus"
+        >CONTACT US</a>
+
+      </div>
+    </div>
+
+    <script>
+      const hamburgerIcon = document.querySelector('.hamburger-icon')
+
+      const dropDownMenu = document.querySelector('.drop-down-menu')
+
+      hamburgerIcon.addEventListener('click', () => {
+        dropDownMenu.classList.toggle('hidden')
+      })
+    </script>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
@@ -69,7 +112,9 @@
 
       <h6 id="support-email">Email - support@beerbarandpizza.com.au</h6>
     </section>
-
   </body>
 
 </html>
+
+
+
