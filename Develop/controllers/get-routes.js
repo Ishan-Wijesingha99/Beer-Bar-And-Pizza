@@ -14,7 +14,7 @@ router.get('/', async (req, res) => {
         console.log(error)
         return res.status(400).json(error)
     }
-
+    
 })
 
 // pizza menu page
@@ -25,7 +25,7 @@ router.get('/pizza', async (req, res) => {
         const pizza = pizzaData.map((pizza) => pizza.get({ plain: true }));
         console.log(pizza);
         res.render('pizza', { pizza });
-      });
+});
 
 //pizza by id
 router.get('/pizza/:id', async (req, res) => {
@@ -41,13 +41,9 @@ router.get('/pizza/:id', async (req, res) => {
       } catch (err) {
           res.status(500).json(err);
       };     
-  });
+});
 
 
 
 module.exports = router;
-
-
-
-
 
