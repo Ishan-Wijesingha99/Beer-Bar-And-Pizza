@@ -7,20 +7,42 @@ const { Beer, Favourites, Ingredients, Pizza, User } = require('../models');
 
 // home page
 router.get('/', async (req, res) => {
-    res.status(200).send('Home page')
+    
+    try {
+        res.status(200).render('homepage')   
+    } catch (error) {
+        console.log(error)
+        return res.status(400).json(error)
+    }
+
 })
 
+// pizza menu page
+router.get('/pizza', async (req, res) => {
+    const pizzaData = await Pizza.findAll().catch((err) => { 
+        res.json(err);
+      });
+        const pizza = pizzaData.map((pizza) => pizza.get({ plain: true }));
+        console.log(pizza);
+        res.render('pizza', { pizza });
+      });
 
-router.get('/register', async (req, res) => {
-    res.status(200).render('register.handlebars')
-})
-router.post('/register', async (req, res) => {
-    res.status(200).send(req.body);
-})
+//pizza by id
+router.get('/pizza/:id', async (req, res) => {
+    try{ 
+        const pizzaData = await Pizza.findByPk(req.params.id);
+        if(!pizzaData) {
+            res.status(404).json({message: 'No dish with this id!'});
+            return;
+        }
+        const pizza = pizzaData.get({ plain: true });
+        console.log(pizza);
+        res.render('pizza', pizza);
+      } catch (err) {
+          res.status(500).json(err);
+      };     
+  });
+
+
 
 module.exports = router;
-
-
-
-
-
