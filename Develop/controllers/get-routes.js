@@ -1,7 +1,5 @@
-const router = require('express').Router();
-const { Beer, Favourites, Ingredients, Pizza, User } = require('../models');
-
-
+const router = require("express").Router();
+const { Beer, Favourites, Ingredients, Pizza, User } = require("../models");
 
 // all GET requests
 
@@ -14,7 +12,7 @@ router.get('/', async (req, res) => {
         console.log(error)
         return res.status(400).json(error)
     }
-
+    
 })
 
 // pizza menu page
@@ -25,7 +23,7 @@ router.get('/pizza', async (req, res) => {
         const pizza = pizzaData.map((pizza) => pizza.get({ plain: true }));
         console.log(pizza);
         res.render('pizza', { pizza });
-      });
+});
 
 //pizza by id
 router.get('/pizza/:id', async (req, res) => {
@@ -38,24 +36,14 @@ router.get('/pizza/:id', async (req, res) => {
         const pizza = pizzaData.get({ plain: true });
         console.log(pizza);
         res.render('pizza', pizza);
-    } catch (err) {
-        res.status(500).json(err);
-    };     
+      } catch (err) {
+          res.status(500).json(err);
+      };     
+      
+// login page
+router.get("/login", async (req, res) => {
+  res.status(200).render("login");
 });
-
-// about us page
-router.get('/aboutus', (req, res) => {
-
-    try {
-        res.status(200).render('aboutus')   
-    } catch (error) {
-        console.log(error)
-        return res.status(400).json(error)
-    }
-
-})
-
-
 
 
 
