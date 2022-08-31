@@ -40,6 +40,9 @@ router.get('/pizza/:id', async (req, res) => {
           res.status(500).json(err);
       };     
       
+
+})
+
 // login page
 router.get("/login", async (req, res) => {
   res.status(200).render("login");
@@ -48,8 +51,4 @@ router.get("/login", async (req, res) => {
 
 
 module.exports = router;
-
-
-
-
 
