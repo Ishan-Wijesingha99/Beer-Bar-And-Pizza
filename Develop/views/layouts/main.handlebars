@@ -13,12 +13,12 @@
 
   <body>
     <nav class="navbar">
-      <h2 class="nav-left-side">Beer Bar and Pizza</h2>
+      <a class="nav-left-side" href="/">Beer Bar and Pizza</a>
 
       <div class="nav-right-side">
         <img id="fav-star" src="images/favourites-star-nav.png" alt="favourites-star-navbar">
 
-        <a id="cart-icon" href="/favourites">CART</a>
+        <a id="cart-icon" href="/cart">CART</a>
 
         <div class="hamburger-icon">
           <span class="hamburger-span"></span>
@@ -35,6 +35,17 @@
 
       <h6 id="support-email">Email - support@beerbarandpizza.com.au</h6>
     </section>
+
+
+
+    {{!-- adding event listener to favourite star icon --}}
+    <script>
+      const favStarIcon = document.querySelector('#fav-star')
+
+      favStarIcon.addEventListener('click', (event) => {
+        location.href = '/favourites'
+      })
+    </script>
   </body>
 
 </html>

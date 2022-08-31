@@ -28,6 +28,9 @@
 .nav-left-side {
   color: white;
   text-shadow: 1px 1px 5px #000000;
+  text-decoration: none;
+  display: block;
+  font-size: 1.7rem;
 }
 
 .nav-right-side {
@@ -49,6 +52,10 @@
   background-color: #715CF0;
   color: white;
   border: 2px black solid;
+}
+
+#fav-star:hover {
+  cursor: pointer;
 }
 
 .hamburger-span {
@@ -103,6 +110,7 @@
   background-color: #715CF0;
   color: white;
   border: 2px black solid;
+  text-shadow: 1px 1px 4px #000000;
 }
 
 #pick-up-block:hover, #delivery-block:hover,#contact-us-home-button:hover {
@@ -133,7 +141,42 @@
   border: 2px black solid;
   text-decoration: none;
   margin-top: 100px;
+  text-shadow: 1px 1px 4px #000000;
 }
 
+/* about us page */
+.about-us-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  margin: 20px;
+  background-color: #715CF0;
+}
 
+#about-us-title {
+  font-size: 3rem;
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+}
 
+.box-title {
+  margin: 20px;
+  margin-top: 40px;
+  font-size: 2rem;
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+.box-paragraph {
+  margin: 20px;
+  margin-top: 20px;
+  color: white;
+  font-size: 1.4rem;
+}
+
+.about-us-box {
+  border: 2px solid black;
+  margin-top: 40px;
+}

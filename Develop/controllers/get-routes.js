@@ -38,10 +38,24 @@ router.get('/pizza/:id', async (req, res) => {
         const pizza = pizzaData.get({ plain: true });
         console.log(pizza);
         res.render('pizza', pizza);
-      } catch (err) {
-          res.status(500).json(err);
-      };     
-  });
+    } catch (err) {
+        res.status(500).json(err);
+    };     
+});
+
+// about us page
+router.get('/aboutus', (req, res) => {
+
+    try {
+        res.status(200).render('aboutus')   
+    } catch (error) {
+        console.log(error)
+        return res.status(400).json(error)
+    }
+
+})
+
+
 
 
 
