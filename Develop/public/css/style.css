@@ -6,7 +6,14 @@
   font-family: sans-serif;
 }
 
-
+/* body background image */
+.background-image-container {
+  background-image: url('../images/background-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 300px;
+}
 
 /* header */
 .navbar {
@@ -15,7 +22,7 @@
   justify-content: space-between;
   background-color: #FF5931;
   padding: 10px;
-  margin-bottom: 50px;
+  border-bottom: 2px solid black;
 }
 
 .nav-left-side {
@@ -60,8 +67,8 @@
   justify-content: space-between;
   flex-direction: column;
   background-color: #FF5931;
-  margin-top: 50px;
   padding: 20px;
+  border-top: 2px solid black;
 }
 
 #call-number {
@@ -76,6 +83,56 @@
   color: white;
   font-size: 1.3rem;
   text-shadow: 1px 1px 5px #000000;
+}
+
+/* homepage */
+.pick-up-or-delivery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pick-up-block, #delivery-block {
+  display: block;
+  text-decoration: none;
+  font-size: 3rem;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 50vw;
+  text-align: center;
+  background-color: #715CF0;
+  color: white;
+  border: 2px black solid;
+}
+
+#pick-up-block:hover, #delivery-block:hover,#contact-us-home-button:hover {
+  background-color: #6b5aca;
+  transition: 250ms all;
+}
+
+#pick-up-block {
+  margin-right: 1px;
+}
+
+#delivery-block {
+  margin-left: 1px;
+}
+
+.flex-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-us-home-button {
+  display: block;
+  padding: 40px;
+  background-color: #715CF0;
+  margin: 20px;
+  color: white;
+  border: 2px black solid;
+  text-decoration: none;
+  margin-top: 100px;
 }
 
 
