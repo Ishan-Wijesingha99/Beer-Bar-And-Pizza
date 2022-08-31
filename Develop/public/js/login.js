@@ -10,7 +10,6 @@ const loginFormHandler = async (event) => {
       body: JSON.stringify({ email, password }),
       headers: { "Content-Type": "application/json" },
     });
-
     const data = await response.json();
     console.log(data);
 
@@ -35,6 +34,8 @@ const signupFormHandler = async (event) => {
       body: JSON.stringify({ username, email, password }),
       headers: { "Content-Type": "application/json" },
     });
+    const data = await response.json();
+    console.log(data);
 
     if (response.ok) {
       document.location.replace("/");
