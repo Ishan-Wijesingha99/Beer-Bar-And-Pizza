@@ -34,17 +34,60 @@
         </div>
       </div>
     </nav>
-    <nav>
-      <a href="/">Home</a>
-      {{#if loggedIn}}
-        <button id="logout" class="btn-no-style">Logout</button>
-      {{else}}
-        <a href="/login">Login</a>
-      {{/if}}
-    </nav>
 
-    
+    <div class="drop-down-menu hidden">
+      <div class="drop-down-flex-container">
 
+        <a 
+        class="drop-down-link"
+        style="color: white;"
+        href="/login"
+        >
+
+        {{#if loggedIn}}
+          <a 
+          class="drop-down-link"
+          style="color: white;"
+          id="logout"
+          >LOG OUT</a>
+        {{else}}
+          <a 
+          class="drop-down-link"
+          style="color: white;"
+          href="/login"
+          >LOG IN / SIGN UP</a>
+        {{/if}}
+
+        <a
+        class="drop-down-link"
+        style="color: white;"
+        href="/menu"
+        >MENU</a>
+
+        <a
+        class="drop-down-link"
+        style="color: white;"
+        href="/aboutus"
+        >ABOUT US</a>
+
+        <a
+        class="drop-down-link"
+        style="color: white;"
+        href="/contactus"
+        >CONTACT US</a>
+
+      </div>
+    </div>
+
+    <script>
+      const hamburgerIcon = document.querySelector('.hamburger-icon')
+
+      const dropDownMenu = document.querySelector('.drop-down-menu')
+
+      hamburgerIcon.addEventListener('click', () => {
+        dropDownMenu.classList.toggle('hidden')
+      })
+    </script>
 
     <script
       src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
