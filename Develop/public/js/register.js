@@ -16,6 +16,7 @@ registerForm.addEventListener("submit", async (event) => {
     });
 
     if (response.ok) {
+      alert('User successfully registered');
       document.location.replace("/");
     } else {
       alert("Failed to log in");
