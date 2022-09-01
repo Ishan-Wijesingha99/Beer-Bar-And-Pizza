@@ -35,17 +35,17 @@ router.get("/contactus", async (req, res) => {
 });
 
 // pizza menu page
-router.get("/pizza", async (req, res) => {
+router.get("/menu", async (req, res) => {
   const pizzaData = await Pizza.findAll().catch((err) => {
     res.json(err);
   });
   const pizza = pizzaData.map((pizza) => pizza.get({ plain: true }));
   console.log(pizza);
-  res.render("pizza", { pizza });
+  res.render("menu", { pizza });
 });
 
 //pizza by id
-router.get("/pizza/:id", async (req, res) => {
+router.get("/menu/:id", async (req, res) => {
   try {
     const pizzaData = await Pizza.findByPk(req.params.id);
     if (!pizzaData) {
@@ -54,7 +54,7 @@ router.get("/pizza/:id", async (req, res) => {
     }
     const pizza = pizzaData.get({ plain: true });
     console.log(pizza);
-    res.render("pizza", pizza);
+    res.render("menu", pizza);
   } catch (err) {
     res.status(500).json(err);
   }
