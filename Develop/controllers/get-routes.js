@@ -69,4 +69,8 @@ router.get("/login", async (req, res) => {
   res.status(200).render("login");
 });
 
+router.get("/order",async(req,res)=>{
+  res.status(200).render("order");
+})
+
 module.exports = router;
