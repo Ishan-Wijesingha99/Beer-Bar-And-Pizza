@@ -185,4 +185,9 @@
   background-color: #715CF0;
 }
 
-
+.login-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
