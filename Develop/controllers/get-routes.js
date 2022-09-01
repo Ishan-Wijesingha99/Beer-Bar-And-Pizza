@@ -38,15 +38,15 @@ router.get('/pizza/:id', async (req, res) => {
         res.render('pizza', pizza);
     } catch (err) {
           res.status(500).json(err);
-    };     
 
-});
-
+      };     
+    })      
 //pizza registration page
 router.get('/register', async (req,res)=>{
     res.render('register');
 
 })
+
 
 // login page
 router.get("/login", async (req, res) => {
