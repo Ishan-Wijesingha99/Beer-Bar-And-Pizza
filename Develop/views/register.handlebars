@@ -1,14 +1,14 @@
 <h1>Create an account</h1>
-
+<div class="background-image-container">
 <form id="registerForm">
   <input type="email" id="email" name="email" placeholder="email"><br>
   <input type="text" id="name" name="name" placeholder="Name"><br>
   <input type="text" id="address" name="address" placeholder="Address"><br>
   <input type="tel" id="mobile" name="mobile" placeholder="Mobile number"><br>
-  <input type="password" id="password" name="password" placeholder="Password"><br>
+  <input type="password" id="password" name="password" placeholder="Password" pattern=".{8,}" title="password must be at least 8 or more characters"><br>
   <input type="password" id="repeatPassword" name="repeatpassword" placeholder="Repeat password" pattern=".{8,}" title="password must be at least 8 or more characters"><br>
   <label>By creating an account I agree to the terms and conditions and privacy policy</label>
   <input type="submit" value="Sign Up">
 </form> 
-
+</div>
 <script src="./js/register.js">  </script>
