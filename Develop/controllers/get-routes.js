@@ -73,4 +73,13 @@ router.get("/order",async(req,res)=>{
   res.status(200).render("order");
 })
 
+// cart page
+router.get("/cart", async (req, res) => {
+  try {
+    res.status(200).render("cart");
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json(error);
+  }
+});
 module.exports = router;
