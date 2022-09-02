@@ -33,6 +33,41 @@ router.get("/contactus", async (req, res) => {
     return res.status(400).json(error);
   }
 });
+router.get("/findstore", async (req, res) => {
+  try {
+    res.status(200).render("findstore");
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json(error);
+  }
+});
+router.get("/feedback", async (req, res) => {
+  try {
+    res.status(200).render("feedback");
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json(error);
+  }
+});
+router.get("/investorrelations", async (req, res) => {
+  try {
+    res.status(200).render("investorrelations");
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json(error);
+  }
+});
+router.get("/mediaenquiry", async (req, res) => {
+  try {
+    res.status(200).render("mediaenquiry");
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json(error);
+  }
+});
+
+
+
 
 // pizza menu page
 router.get("/menu", async (req, res) => {
