@@ -6,8 +6,9 @@ const logout = async () => {
 
   if (response.ok) {
     document.location.replace("/login");
+    Swal.fire("Logout suceessful.");
   } else {
-    alert("Failed to log out.");
+    Swal.fire("Failed to log out.");
   }
 };
 
