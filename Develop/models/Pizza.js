@@ -18,6 +18,10 @@ Pizza.init(
     pizza_description: {
       type: DataTypes.STRING,
     },
+    filename: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     price : {
       type: DataTypes.STRING,
     }

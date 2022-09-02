@@ -4,10 +4,10 @@ const register = document.querySelector("#register");
 
 guest.addEventListener('click',async()=>
 {
-const response = await fetch("/pizza")
+const response = await fetch("/menu")
 
   if (response.ok) {
-    document.location.replace("/pizza");
+    document.location.replace("/menu");
   }
 }
 );

@@ -8,6 +8,6 @@ module.exports = router;
 
 const pizzaRoutes = require("./pizza-routes");
 
-router.use("/pizza", pizzaRoutes);
+router.use("/menu", pizzaRoutes);
 
 module.exports = router;
