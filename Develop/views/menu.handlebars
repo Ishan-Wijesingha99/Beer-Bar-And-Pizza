@@ -1,0 +1,15 @@
+<section class="container">
+<div id="menu-header">Pizza menu:
+</div>
+{{#each pizza as |object|}}
+<h1>{{object.pizza_name}}</h1>
+<h3>{{object.pizza_description}}</h3>
+<img src="./images/pizza-imgs/{{object.filename}}" alt="{{object.pizza_description}}">
+<p>${{object.price}}</p>
+<button><a href="/menu/{{object.id}}">Add to cart</a></button>
+{{/each}}
+<h1>{{pizza_name}}</h1>
+<h3>{{pizza_description}}</h3>
+<img src="../images/pizza-imgs/{{filename}}" alt="{{pizza_description}}">
+<p><button><a href="/menu">View full menu</a></button></p>
+</section>

@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
-
+const Swal = require("sweetalert2");
 const exphbs = require("express-handlebars");
 const helpers = require("./utils/helpers");
 
@@ -18,7 +18,7 @@ const hbs = exphbs.create({ helpers });
 const sess = {
   secret: "Super secret secret",
   cookie: {
-    maxAge: 30000000,
+    maxAge: 3000000,
     httpOnly: true,
     secure: false,
     sameSite: "strict",

@@ -50,7 +50,8 @@
   margin: 5px;
 }
 
-#cart-icon {
+#cart-icon, 
+#menu-header {
   margin: 5px;
   display: inline-block;
   text-decoration: none;
@@ -58,6 +59,10 @@
   background-color: #715CF0;
   color: white;
   border: 2px black solid;
+}
+
+#menu-header {
+  font-size: 32px;
 }
 
 #fav-star:hover {
@@ -184,5 +189,24 @@
   margin: 20px;
   background-color: #715CF0;
 }
+.contact-us-flex-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  margin: 20px;
+  background-color: salmon;
+}
 
+.contact-us-title{
+  text-align: center;
+ 
+}
 
+.login-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
