@@ -14,12 +14,11 @@ registerForm.addEventListener("submit", async (event) => {
       body: JSON.stringify({ email, name, mobile, address, password }),
       headers: { "Content-Type": "application/json" },
     });
-
+    console.log(response);
     if (response.ok) {
       Swal.fire("User successfully registered");
       document.location.replace("/login");
-      
-    } else{
+    } else {
       Swal.fire("Failed to log in", "please register");
     }
   } else Swal.fire("Passwords do not match, please reenter again");
