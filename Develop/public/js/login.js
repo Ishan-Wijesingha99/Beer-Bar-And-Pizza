@@ -4,6 +4,13 @@ const loginFormHandler = async (event) => {
   const email = document.querySelector("#email-login").value.trim();
   const password = document.querySelector("#password-login").value.trim();
 
+  if (!email && !password) {
+    Swal.fire("Please enter e-mail and password");
+  } else if (email && !password) {
+    Swal.fire("Please enter  password");
+  } else if (!email && password) {
+    Swal.fire("Please enter  e-mail");
+  }
   if (email && password) {
     const response = await fetch("/api/users/login", {
       method: "POST",

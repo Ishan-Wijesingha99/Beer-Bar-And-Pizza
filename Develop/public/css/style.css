@@ -196,7 +196,7 @@
   flex-direction: column;
   padding: 40px;
   margin: 20px;
-  background-color: salmon;
+  background-color: rgb(114, 250, 248);
 }
 
 .contact-us-title{
@@ -209,4 +209,6 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  background-color: rgb(248, 250, 215);
+  width: 50%;
 }
