@@ -23,8 +23,6 @@ router.get("/aboutus", async (req, res) => {
 });
 
 //contact us
-
-
 router.get("/contactus", async (req, res) => {
   try {
     res.status(200).render("contactus");
@@ -33,6 +31,7 @@ router.get("/contactus", async (req, res) => {
     return res.status(400).json(error);
   }
 });
+
 router.get("/findstore", async (req, res) => {
   try {
     res.status(200).render("findstore");

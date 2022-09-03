@@ -83,6 +83,10 @@
   display: none;
 }
 
+.hamburger-icon {
+  cursor: pointer;
+}
+
 .drop-down-flex-container {
   display: flex;
   flex-direction: column;
@@ -188,7 +192,29 @@
   padding: 40px;
   margin: 20px;
   background-color: #715CF0;
+  border: 2px solid black;
 }
+
+#about-us-title {
+  margin-bottom: 40px;
+}
+
+.about-us-box {
+  border: 2px solid black;
+  margin-bottom: 40px;
+}
+
+.box-title, .box-paragraph {
+  margin: 20px;
+}
+
+#about-us-title, .box-title {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+
+/* contact us page */
 .contact-us-flex-container{
   display: flex;
   align-items: center;
