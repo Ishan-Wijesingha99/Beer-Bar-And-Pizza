@@ -1,4 +1,4 @@
-const registerForm = document.querySelector("#registerForm");
+const registerForm = document.querySelector(".login-card");
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
