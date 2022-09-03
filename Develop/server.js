@@ -1,7 +1,7 @@
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
-
+const Swal = require("sweetalert2");
 const exphbs = require("express-handlebars");
 const helpers = require("./utils/helpers");
 
