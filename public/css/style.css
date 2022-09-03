@@ -212,3 +212,21 @@
   background-color: rgb(248, 250, 215);
   width: 50%;
 }
+input,textarea{
+  width:100%;
+  margin-top: 2 rem;
+  border: none;
+border-bottom: 1px solid black;
+}
+
+
+.submit{
+  border: 1px, solid black;
+  padding: 1rem;
+  text-align: center;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.submit:hover{
+  opacity:0.6;
+}
