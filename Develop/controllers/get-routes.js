@@ -33,19 +33,54 @@ router.get("/contactus", async (req, res) => {
     return res.status(400).json(error);
   }
 });
+router.get("/findstore", async (req, res) => {
+  try {
+    res.status(200).render("findstore");
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json(error);
+  }
+});
+router.get("/feedback", async (req, res) => {
+  try {
+    res.status(200).render("feedback");
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json(error);
+  }
+});
+router.get("/investorrelations", async (req, res) => {
+  try {
+    res.status(200).render("investorrelations");
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json(error);
+  }
+});
+router.get("/mediaenquiry", async (req, res) => {
+  try {
+    res.status(200).render("mediaenquiry");
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json(error);
+  }
+});
+
+
+
 
 // pizza menu page
-router.get("/pizza", async (req, res) => {
+router.get("/menu", async (req, res) => {
   const pizzaData = await Pizza.findAll().catch((err) => {
     res.json(err);
   });
   const pizza = pizzaData.map((pizza) => pizza.get({ plain: true }));
   console.log(pizza);
-  res.render("pizza", { pizza });
+  res.render("menu", { pizza });
 });
 
 //pizza by id
-router.get("/pizza/:id", async (req, res) => {
+router.get("/menu/:id", async (req, res) => {
   try {
     const pizzaData = await Pizza.findByPk(req.params.id);
     if (!pizzaData) {
@@ -54,7 +89,7 @@ router.get("/pizza/:id", async (req, res) => {
     }
     const pizza = pizzaData.get({ plain: true });
     console.log(pizza);
-    res.render("pizza", pizza);
+    res.render("menu", pizza);
   } catch (err) {
     res.status(500).json(err);
   }
@@ -73,4 +108,13 @@ router.get("/order",async(req,res)=>{
   res.status(200).render("order");
 })
 
+// cart page
+router.get("/cart", async (req, res) => {
+  try {
+    res.status(200).render("cart");
+  } catch (error) {
+    console.log(error);
+    return res.status(400).json(error);
+  }
+});
 module.exports = router;

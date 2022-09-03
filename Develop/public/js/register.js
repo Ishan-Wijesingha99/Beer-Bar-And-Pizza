@@ -11,15 +11,15 @@ registerForm.addEventListener("submit", async (event) => {
   if (password === repeatPassword) {
     const response = await fetch("/register", {
       method: "POST",
-      body: JSON.stringify({ email, name, address, mobile, password }),
+      body: JSON.stringify({ email, name, mobile, address, password }),
       headers: { "Content-Type": "application/json" },
     });
 
     if (response.ok) {
-      alert('User successfully registered');
-      document.location.replace("/");
+      Swal.fire("User successfully registered");
+      document.location.replace("/login");
     } else {
-      alert("Failed to log in");
+      Swal.fire("Failed to log in", "please register");
     }
-  } else alert("Passwords do not match, please reenter again");
+  } else Swal.fire("Passwords do not match, please reenter again");
 });
