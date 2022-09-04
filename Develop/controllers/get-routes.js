@@ -12,6 +12,7 @@ router.get("/", async (req, res) => {
     return res.status(400).json(error);
   }
 });
+
 // about us
 router.get("/aboutus", async (req, res) => {
   try {
@@ -32,6 +33,7 @@ router.get("/contactus", async (req, res) => {
   }
 });
 
+// findstore page
 router.get("/findstore", async (req, res) => {
   try {
     res.status(200).render("findstore");
@@ -40,6 +42,8 @@ router.get("/findstore", async (req, res) => {
     return res.status(400).json(error);
   }
 });
+
+// feedback page
 router.get("/feedback", async (req, res) => {
   try {
     res.status(200).render("feedback");
@@ -48,6 +52,8 @@ router.get("/feedback", async (req, res) => {
     return res.status(400).json(error);
   }
 });
+
+// investor relations page
 router.get("/investorrelations", async (req, res) => {
   try {
     res.status(200).render("investorrelations");
@@ -56,6 +62,8 @@ router.get("/investorrelations", async (req, res) => {
     return res.status(400).json(error);
   }
 });
+
+// media enquiry page
 router.get("/mediaenquiry", async (req, res) => {
   try {
     res.status(200).render("mediaenquiry");
@@ -64,9 +72,6 @@ router.get("/mediaenquiry", async (req, res) => {
     return res.status(400).json(error);
   }
 });
-
-
-
 
 // pizza menu page
 router.get("/menu", async (req, res) => {
@@ -78,21 +83,6 @@ router.get("/menu", async (req, res) => {
   res.render("menu", { pizza });
 });
 
-//pizza by id
-router.get("/menu/:id", async (req, res) => {
-  try {
-    const pizzaData = await Pizza.findByPk(req.params.id);
-    if (!pizzaData) {
-      res.status(404).json({ message: "No dish with this id!" });
-      return;
-    }
-    const pizza = pizzaData.get({ plain: true });
-    console.log(pizza);
-    res.render("menu", pizza);
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
 //pizza registration page
 router.get("/register", async (req, res) => {
   res.render("register");
@@ -103,6 +93,7 @@ router.get("/login", async (req, res) => {
   res.status(200).render("login");
 });
 
+// order page
 router.get("/order",async(req,res)=>{
   res.status(200).render("order");
 })
@@ -110,10 +101,23 @@ router.get("/order",async(req,res)=>{
 // cart page
 router.get("/cart", async (req, res) => {
   try {
-    res.status(200).render("cart");
+    const arrayOfStrings = []
+
+    for(let i=1; i <= 4; i++) {
+      
+      if(eval(`req.session.menuItem${i}`)) {
+        eval(`arrayOfStrings.push('${i} EXISTS!')`)
+      }
+
+    }
+
+    res.status(200).render("cart", {arrayOfStrings});
+
+
   } catch (error) {
     console.log(error);
     return res.status(400).json(error);
   }
 });
+
 module.exports = router;

@@ -70,4 +70,14 @@ router.post("/logout", (req, res) => {
   }
 });
 
+// add to cart menu post request
+router.post('/menu', (req, res) => {
+
+  const {id} = req.body
+
+  eval(`req.session.menuItem${id} = ${id}`)
+
+  res.status(200).end()
+})
+
 module.exports = router;
