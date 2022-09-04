@@ -221,16 +221,43 @@
   align-items: center;
   justify-content: center;
   flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
   padding: 40px;
-  margin: 20px;
-  background-color: rgb(114, 250, 248);
+  background-color: #715CF0;
+  width: 40vw;
+  border: 2px solid black;
 }
 
-.contact-us-title{
+#contact-us-title{
   text-align: center;
- 
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  margin-bottom: 30px;
 }
 
+.contact-us-btn-flex-container {
+  display: flex;
+}
+
+#findstore, #feedback, #media, #investor {
+  margin: 20px;
+  padding: 10px 25px;
+  border: 2px solid black;
+  color: white;
+  background-color: #FF5931;
+  border-radius: 0;
+}
+
+#findstore:hover, #feedback:hover, #media:hover, #investor:hover {
+ cursor: pointer;
+ background-color: #ea481f;
+}
+
+
+
+
+/* 888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
 .login-card{
   display: flex;
   align-items: center;
@@ -257,6 +284,7 @@ input, textarea{
 .submit:hover{
   opacity:0.6;
 }
+/* 88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
 
 /* register page */
 #create-account-title {
@@ -434,6 +462,7 @@ input, textarea{
   font-size: 1.4rem;
   margin-top: 20px;
   margin-bottom: 20px;
+  border-radius: 0;
 }
 
 #login-btn:hover {
@@ -441,3 +470,4 @@ input, textarea{
   background-color: #ea481f;
 }
 
+/* findstore page */
