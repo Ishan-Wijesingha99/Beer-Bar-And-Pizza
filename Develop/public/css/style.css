@@ -521,3 +521,43 @@ input, textarea{
   cursor: pointer;
   background-color: #ea481f;
 }
+
+/* feedback page */
+.feedback-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #715CF0;
+  border: 2px solid black;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+#leave-your-feedback {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  margin-bottom: 40px;
+}
+
+#form-title {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#feedback-name, #feedback-email, #feedback-subject, #feedback-message {
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+#send-message-btn {
+  border: 2px solid black;
+  background-color: #FF5931;
+  color: white;
+}
