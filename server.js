@@ -1,10 +1,10 @@
 const path = require("path");
 const express = require("express");
 const session = require("express-session");
-const Swal = require("sweetalert2");
+
 const exphbs = require("express-handlebars");
 const helpers = require("./utils/helpers");
-
+const router = express.Router();
 const allRoutes = require("./controllers");
 
 const sequelize = require("./config/connection");
@@ -44,3 +44,4 @@ app.use(allRoutes);
 sequelize.sync({ force: false }).then(() => {
   app.listen(PORT, () => console.log("Now listening"));
 });
+module.exports = router;

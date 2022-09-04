@@ -1,4 +1,4 @@
-const registerForm = document.querySelector("#registerForm");
+const registerForm = document.querySelector(".login-card");
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
@@ -14,7 +14,7 @@ registerForm.addEventListener("submit", async (event) => {
       body: JSON.stringify({ email, name, mobile, address, password }),
       headers: { "Content-Type": "application/json" },
     });
-
+    console.log(response);
     if (response.ok) {
       Swal.fire("User successfully registered");
       document.location.replace("/login");
