@@ -397,3 +397,46 @@ input, textarea{
 #ending-div {
   margin-top: 60px;
 }
+
+/* login page */
+.login-card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login-page-title {
+  margin: 30px;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+#login-email-label, #login-password-label {
+  color: white;
+}
+
+#email-login, #password-login {
+  border: 2px solid black;
+}
+
+.login-btn-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+#login-btn {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FF5931;
+  border: 2px solid black;
+  padding: 10px 40px;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#login-btn:hover {
+  cursor: pointer;
+  background-color: #ea481f;
+}
+
