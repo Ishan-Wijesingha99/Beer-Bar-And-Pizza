@@ -60,6 +60,11 @@
   border: 2px black solid;
 }
 
+#cart-icon:hover {
+  background-color: #6b5aca;
+  transition: 250ms all;
+}
+
 #fav-star:hover {
   cursor: pointer;
 }
@@ -382,4 +387,13 @@ input, textarea{
   text-decoration: none;
   cursor: pointer;
   color: white;
+}
+
+.menu-pizza-add-to-cart:hover {
+  background-color: #6b5aca;
+  transition: 250ms all;
+}
+
+#ending-div {
+  margin-top: 60px;
 }
