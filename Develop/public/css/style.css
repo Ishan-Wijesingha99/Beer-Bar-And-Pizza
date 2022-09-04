@@ -471,3 +471,53 @@ input, textarea{
 }
 
 /* findstore page */
+.findstore-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #715CF0;
+  border: 2px solid black;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+#find-your-local-store {
+  text-align: center;
+  margin: 30px;
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+#state-label, #suburb-label {
+  color: white;
+}
+
+#state, #suburb {
+  border: 2px solid black;
+  border-radius: 0;
+}
+
+.findstore-btn-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+#findstore-btn {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FF5931;
+  border: 2px solid black;
+  padding: 10px 40px;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 0;
+}
+
+#findstore-btn:hover {
+  cursor: pointer;
+  background-color: #ea481f;
+}

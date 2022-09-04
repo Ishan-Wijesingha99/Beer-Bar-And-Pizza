@@ -1,28 +1,30 @@
 <div class="background-image-container">
 
-  <div class="contact-us-flex-container">
+  <div class="findstore-flex-container">
 
-    <h2 style="text-align: center;">Find Your Local Store</h2>
+    <h2 id="find-your-local-store">Find Your Local Store</h2>
 
-    <div class="who-we-are-div about-us-box">
+    <div class="contact-us-btn-flex-container">
       <button type="button" id="findstore" class="btn btn-outline-primary">Find Your Local Store</button>
-      <button type="button" id="feedback" class="btn btn-outline-primary">Leave A Feed Back</button>
+      <button type="button" id="feedback" class="btn btn-outline-primary">Leave A Feedback</button>
       <button type="button" id="media" class="btn btn-outline-primary">Media Enquiry</button>
       <button type="button" id="investor" class="btn btn-outline-primary">Investor Relations</button>
     </div>
     
     <form>
       <div class="form-group">
-        <label for="exampleInputEmail1">State</label>
+        <label for="exampleInputEmail1" id="state-label">State:</label>
         <input type="state" class="form-control" id="state" aria-describedby="state" placeholder="Enter State Name">
       </div>
 
       <div class="form-group">
-        <label for="suburb">suburb</label>
+        <label for="suburb" id="suburb-label">Suburb:</label>
         <input type="text" class="form-control" id="suburb" placeholder="suburb">
       </div>
     
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <div class="findstore-btn-flex-container">
+      <button type="submit" class="btn btn-primary" id="findstore-btn">Submit</button>
+      </div>
     </form>
 
   </div>
