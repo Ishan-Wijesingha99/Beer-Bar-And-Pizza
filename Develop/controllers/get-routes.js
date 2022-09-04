@@ -101,18 +101,23 @@ router.get("/order",async(req,res)=>{
 // cart page
 router.get("/cart", async (req, res) => {
   try {
-    const arrayOfStrings = []
+    const arrayOfObjects = []
 
     for(let i=1; i <= 4; i++) {
       
       if(eval(`req.session.menuItem${i}`)) {
-        eval(`arrayOfStrings.push('${i} EXISTS!')`)
-      }
 
+        Pizza.findOne({where: {id: i}})
+        .then(data => {
+          console.log(data.get({plain: true}))
+          arrayOfObjects.push(data.get({plain: true}))
+        })
+
+      }
+      
     }
 
-    res.status(200).render("cart", {arrayOfStrings});
-
+    res.status(200).render("cart", {arrayOfObjects});
 
   } catch (error) {
     console.log(error);
