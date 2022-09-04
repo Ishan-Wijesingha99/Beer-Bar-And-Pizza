@@ -561,3 +561,33 @@ input, textarea{
   background-color: #FF5931;
   color: white;
 }
+
+/* media enquiry page */
+.media-enquiry-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #715CF0;
+  border: 2px solid black;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+#media-enquiry-title {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  margin-bottom: 30px;
+}
+
+.social-media {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  color: white;
+}
