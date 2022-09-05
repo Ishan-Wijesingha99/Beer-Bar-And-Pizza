@@ -17,10 +17,36 @@
                 <div class="right-side-cart-item">
                     <p class="cart-pizza-price">${{object.price}}</p>
 
-                    <button class="remove-from-cart-btn">REMOVE FROM CART</button>
+                    <button class="remove-from-cart-btn" id="cart-btn-{{object.id}}">REMOVE FROM CART</button>
                 </div>
             </div>
         {{/each}}
     </div>
 
 </div>
+
+
+    
+<script>
+    const allRemoveCartBtns = document.querySelectorAll('.remove-from-cart-btn')
+    
+    allRemoveCartBtns.forEach(element => {
+        element.addEventListener('click', async () => {
+
+            try {
+                await fetch("/api/users/deletecartitem", {
+                    method: "POST",
+                    body: JSON.stringify({id: element.id.slice(-1)}),
+                    headers: { "Content-Type": "application/json" },
+                })
+
+                // after the POST request has been sent, restart the page
+                location.reload()
+
+            } catch(err) {
+                console.log(err)
+            }
+
+        })
+    })
+</script>

@@ -80,4 +80,13 @@ router.post('/menu', (req, res) => {
   res.status(200).end()
 })
 
+// delete cart item from cart page
+router.post('/deletecartitem', (req, res) => {
+  const {id} = req.body
+
+  eval(`delete req.session.menuItem${id}`)
+
+  res.status(200).end()
+})
+
 module.exports = router;
