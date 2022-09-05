@@ -631,3 +631,74 @@ input, textarea{
   color: white;
   margin-bottom: 20px;
 }
+
+/* cart page */
+.cart-div-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+  padding-top: 30px;
+  background-color: #715CF0;
+  border: 2px solid black;
+  margin-bottom: 100px;
+}
+
+#cart-page-title {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 4px #000000;  
+}
+
+.individual-cart-item {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-pizza-name {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.cart-item-image {
+  border: 2px solid black;
+  width: 150px;
+}
+
+.left-side-cart-item {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.right-side-cart-item {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.remove-from-cart-btn {
+  padding: 10px 20px;
+  background-color: #FF5931;
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+.remove-from-cart-btn:hover {
+  background-color: #ea481f;
+  cursor: pointer;
+}
+
+.cart-pizza-price {
+  font-size: 2rem;
+}
+
