@@ -254,10 +254,6 @@
  background-color: #ea481f;
 }
 
-
-
-
-/* 888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
 .login-card{
   display: flex;
   align-items: center;
@@ -284,7 +280,6 @@ input, textarea{
 .submit:hover{
   opacity:0.6;
 }
-/* 88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
 
 /* register page */
 #create-account-title {
@@ -331,6 +326,7 @@ input, textarea{
 #register-sign-up-btn {
   padding: 20px;
   border-top: 2px solid black;
+  border-bottom: 2px solid black;
   background-color: #FF5931;
   color: white;
   font-size: 1.6rem;
