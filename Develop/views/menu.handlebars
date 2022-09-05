@@ -1,0 +1,41 @@
+<section class="container">
+
+    <div id="menu-header">Pizza Menu</div>
+
+    {{#each pizza as |object|}}
+        <div class="menu-item-{{object.id}}">
+            <h2 class="menu-pizza-name">{{object.pizza_name}}</h2>
+
+            <h3>{{object.pizza_description}}</h3>
+
+            <img src="./images/pizza-imgs/{{object.filename}}" alt="{{object.pizza_description}}">
+
+            <p class="menu-pizza-price">${{object.price}}</p>
+
+            <a id="add-to-cart-btn-{{object.id}}" class="menu-pizza-add-to-cart" style="color: white;">Add to cart</a>
+        </div>
+    {{/each}}
+
+    <div id="ending-div"></div>
+
+    <script>
+        const allAddCartBtns = document.querySelectorAll('.menu-pizza-add-to-cart')
+        
+        allAddCartBtns.forEach(element => {
+            element.addEventListener('click', async () => {
+
+                try {
+                    await fetch("/api/users/menu", {
+                        method: "POST",
+                        body: JSON.stringify({id: element.id.slice(-1)}),
+                        headers: { "Content-Type": "application/json" },
+                    });
+                } catch(err) {
+                    console.log(err)
+                }
+
+            })
+        })
+    </script>
+
+</section>

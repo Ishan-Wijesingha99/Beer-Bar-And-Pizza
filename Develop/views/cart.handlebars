@@ -1,0 +1,26 @@
+
+<div class="background-image-container">
+
+    <div class="cart-div-container">
+        <h1 id="cart-page-title">Your Cart</h1>
+
+        {{#each arrayOfObjects as |object|}}
+            <div class="cart-item-{{object.id}} individual-cart-item">
+
+                <div class="left-side-cart-item">
+                    <h2 class="cart-pizza-name">{{object.pizza_name}}</h2>
+
+                    <img class="cart-item-image" src="./images/pizza-imgs/{{object.filename}}" alt="{{object.pizza_description}}">
+                </div>
+
+
+                <div class="right-side-cart-item">
+                    <p class="cart-pizza-price">${{object.price}}</p>
+
+                    <button class="remove-from-cart-btn">REMOVE FROM CART</button>
+                </div>
+            </div>
+        {{/each}}
+    </div>
+
+</div>

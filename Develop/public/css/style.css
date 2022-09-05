@@ -1,0 +1,705 @@
+/* general CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+/* body background image */
+.background-image-container {
+  background-image: url('../images/background-image.png');
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-top: 100px;
+  padding-bottom: 300px;
+}
+
+/* header */
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #FF5931;
+  padding: 10px;
+  border-bottom: 2px solid black;
+}
+
+.nav-left-side {
+  color: white;
+  text-shadow: 1px 1px 5px #000000;
+  text-decoration: none;
+  display: block;
+  font-size: 1.7rem;
+}
+
+.nav-left-side:hover {
+  cursor: pointer;
+  text-decoration: none;
+  color: white;
+}
+
+.nav-right-side {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#fav-star {
+  height: 30px;
+  margin: 5px;
+}
+
+#cart-icon {
+  margin: 5px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px;
+  background-color: #715CF0;
+  color: white;
+  border: 2px black solid;
+}
+
+#cart-icon:hover {
+  background-color: #6b5aca;
+  transition: 250ms all;
+}
+
+#fav-star:hover {
+  cursor: pointer;
+}
+
+.hamburger-span {
+  width: 40px;
+  height: 8px;
+  margin: 5px;
+  background-color: white;
+  display: block;
+  border: 2px black solid;
+}
+
+/* hamburger icon and drop-down menu */
+.hidden {
+  display: none;
+}
+
+.hamburger-icon {
+  cursor: pointer;
+}
+
+.drop-down-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  padding: 10px;
+  background-color: #715CF0;
+  border-bottom: 2px solid black;
+}
+
+.drop-down-link {
+  display: inline-block;
+  margin: 5px;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+.drop-down-link:hover {
+  cursor: pointer;
+}
+
+/* footer */
+.main-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
+  background-color: #FF5931;
+  padding: 20px;
+  border-top: 2px solid black;
+}
+
+#call-number {
+  margin: 10px;
+  color: white;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+#support-email {
+  margin: 10px;
+  color: white;
+  font-size: 1.3rem;
+  text-shadow: 1px 1px 5px #000000;
+}
+
+/* homepage */
+.pick-up-or-delivery {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#pick-up-block, #delivery-block {
+  display: block;
+  text-decoration: none;
+  font-size: 3rem;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 50vw;
+  text-align: center;
+  background-color: #715CF0;
+  color: white;
+  border: 2px black solid;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+#pick-up-block:hover, #delivery-block:hover,#contact-us-home-button:hover {
+  background-color: #6b5aca;
+  transition: 250ms all;
+}
+
+#pick-up-block {
+  margin-right: 1px;
+}
+
+#delivery-block {
+  margin-left: 1px;
+}
+
+.flex-btn-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#contact-us-home-button {
+  display: block;
+  padding: 40px;
+  background-color: #715CF0;
+  margin: 20px;
+  color: white;
+  border: 2px black solid;
+  text-decoration: none;
+  margin-top: 100px;
+}
+
+/* about us page */
+.about-us-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 40px;
+  margin: 20px;
+  background-color: #715CF0;
+  border: 2px solid black;
+}
+
+#about-us-title {
+  margin-bottom: 40px;
+}
+
+.about-us-box {
+  border: 2px solid black;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.box-title, .box-paragraph {
+  margin: 20px;
+}
+
+#about-us-title, .box-title {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+
+/* contact us page */
+.contact-us-flex-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px;
+  background-color: #715CF0;
+  width: 40vw;
+  border: 2px solid black;
+}
+
+#contact-us-title{
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  margin-bottom: 30px;
+}
+
+.contact-us-btn-flex-container {
+  display: flex;
+}
+
+#findstore, #feedback, #media, #investor {
+  margin: 20px;
+  padding: 10px 25px;
+  border: 2px solid black;
+  color: white;
+  background-color: #FF5931;
+  border-radius: 0;
+}
+
+#findstore:hover, #feedback:hover, #media:hover, #investor:hover {
+ cursor: pointer;
+ background-color: #ea481f;
+}
+
+
+
+
+/* 888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
+.login-card{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: rgb(248, 250, 215);
+  width: 50%;
+}
+
+input, textarea{
+  width:100%;
+  margin-top: 2 rem;
+  border: none;
+  border-bottom: 1px solid black;
+}
+
+.submit{
+  border: 1px, solid black;
+  padding: 1rem;
+  text-align: center;
+  background-color: #ffffff;
+  cursor: pointer;
+}
+.submit:hover{
+  opacity:0.6;
+}
+/* 88888888888888888888888888888888888888888888888888888888888888888888888888888888888888888 */
+
+/* register page */
+#create-account-title {
+  text-align: center;
+  display: inline-block;
+  color: white;
+  padding: 30px;
+  background-color: #FF5931;
+  border: 2px solid black;
+  text-shadow: 1px 1px 4px #000000;
+  margin-bottom: 60px;
+}
+
+.register-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.login-card {
+  background-color: #715CF0;
+  border: 2px solid black;
+}
+
+#registration-form-heading {
+  margin-bottom: 40px;
+  margin-top: 40px;
+  text-shadow: 1px 1px 4px #000000;
+  color: white;
+}
+
+#register-email, #register-name, #register-address, #register-mobile, #register-password, #repeatPassword {
+  margin-bottom: 20px;
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  padding: 5px;
+}
+
+#terms-and-conditions-message {
+  color: white;
+}
+
+#register-sign-up-btn {
+  padding: 20px;
+  border-top: 2px solid black;
+  background-color: #FF5931;
+  color: white;
+  font-size: 1.6rem;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+#register-sign-up-btn:hover {
+  cursor: pointer;
+  background-color: #ea481f;
+}
+
+/* order page */
+.order-flex-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #715CF0;
+  width: 40vw;
+  border: 2px solid black;
+  padding: 30px;
+}
+
+.page-title {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  margin-bottom: 30px;
+  font-size: 2.5rem;
+}
+
+#guest, #login, #register {
+  padding: 20px 50px;
+  width: 400px;
+  display: inline-block;
+  margin: 10px;
+  background-color: #FF5931;
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+#guest:hover, #login:hover, #register:hover {
+  cursor: pointer;
+  background-color: #ea481f;
+}
+
+/* menu page */
+#menu-header {
+  font-size: 32px;
+  margin-top: 30px;
+  margin-bottom: 30px;
+  display: inline-block;
+  text-decoration: none;
+  padding: 8px;
+  background-color: #715CF0;
+  color: white;
+  border: 2px black solid;
+}
+
+.menu-pizza-name {
+  text-decoration: underline;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  font-size: 3rem;
+}
+
+.menu-pizza-price {
+  font-size: 1.6rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.menu-pizza-add-to-cart {
+  display: inline-block;
+  padding: 15px 20px;
+  background-color: #715CF0;
+  border: 2px solid black;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+.menu-pizza-add-to-cart:hover {
+  text-decoration: none;
+  cursor: pointer;
+  color: white;
+}
+
+.menu-pizza-add-to-cart:hover {
+  background-color: #6b5aca;
+  transition: 250ms all;
+}
+
+#ending-div {
+  margin-top: 60px;
+}
+
+/* login page */
+.login-card {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#login-page-title {
+  margin: 30px;
+  color: white;
+  font-size: 2rem;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+#login-email-label, #login-password-label {
+  color: white;
+}
+
+#email-login, #password-login {
+  border: 2px solid black;
+}
+
+.login-btn-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+#login-btn {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FF5931;
+  border: 2px solid black;
+  padding: 10px 40px;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 0;
+}
+
+#login-btn:hover {
+  cursor: pointer;
+  background-color: #ea481f;
+}
+
+/* findstore page */
+.findstore-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #715CF0;
+  border: 2px solid black;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+#find-your-local-store {
+  text-align: center;
+  margin: 30px;
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+}
+
+#state-label, #suburb-label {
+  color: white;
+}
+
+#state, #suburb {
+  border: 2px solid black;
+  border-radius: 0;
+}
+
+.findstore-btn-flex-container {
+  display: flex;
+  align-items: center;
+}
+
+#findstore-btn {
+  margin-left: auto;
+  margin-right: auto;
+  background-color: #FF5931;
+  border: 2px solid black;
+  padding: 10px 40px;
+  font-size: 1.4rem;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  border-radius: 0;
+}
+
+#findstore-btn:hover {
+  cursor: pointer;
+  background-color: #ea481f;
+}
+
+/* feedback page */
+.feedback-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #715CF0;
+  border: 2px solid black;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+#leave-your-feedback {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  margin-bottom: 40px;
+}
+
+#form-title {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  text-align: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+#feedback-name, #feedback-email, #feedback-subject, #feedback-message {
+  margin-bottom: 20px;
+  padding: 5px;
+  border: 2px solid black;
+}
+
+#send-message-btn {
+  border: 2px solid black;
+  background-color: #FF5931;
+  color: white;
+}
+
+/* media enquiry page */
+.media-enquiry-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #715CF0;
+  border: 2px solid black;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+#media-enquiry-title {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  margin-bottom: 30px;
+}
+
+.social-media {
+  color: white;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.social-media a {
+  color: white;
+}
+
+/* investor relations page */
+.investor-relations-flex-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  background-color: #715CF0;
+  border: 2px solid black;
+  width: 40vw;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 30px;
+}
+
+#investor-relations-title {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  margin-bottom: 30px;
+}
+
+#investor-relations-key-takeaways {
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+
+.key-takeaways-flex-container {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 70%;
+}
+
+#key-takeaways-list li {
+  color: white;
+  margin-bottom: 20px;
+}
+
+/* cart page */
+.cart-div-container {
+  margin-left: auto;
+  margin-right: auto;
+  width: 70vw;
+  padding-top: 30px;
+  background-color: #715CF0;
+  border: 2px solid black;
+  margin-bottom: 100px;
+}
+
+#cart-page-title {
+  text-align: center;
+  color: white;
+  text-shadow: 1px 1px 4px #000000;  
+}
+
+.individual-cart-item {
+  border-top: 2px solid black;
+  border-bottom: 2px solid black;
+  margin-bottom: 3px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.cart-pizza-name {
+  text-decoration: underline;
+  font-size: 2.5rem;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.cart-item-image {
+  border: 2px solid black;
+  width: 150px;
+}
+
+.left-side-cart-item {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.right-side-cart-item {
+  margin: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+.remove-from-cart-btn {
+  padding: 10px 20px;
+  background-color: #FF5931;
+  color: white;
+  text-shadow: 1px 1px 4px #000000;
+  background-color: #FF5931;
+}
+
+.remove-from-cart-btn:hover {
+  background-color: #ea481f;
+  cursor: pointer;
+}
+
+.cart-pizza-price {
+  font-size: 2rem;
+}
+

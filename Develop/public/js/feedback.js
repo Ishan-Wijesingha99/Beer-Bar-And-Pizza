@@ -1,8 +1,8 @@
 let contactform = document.querySelector(".contact-form");
-let name = document.getElementById("name");
-let email = document.getElementById("email");
-let text = document.getElementById("text");
-let message = document.getElementById("message");
+let name = document.getElementById("feedback-name");
+let email = document.getElementById("feedback-email");
+let text = document.getElementById("feedback-text");
+let message = document.getElementById("feedback-message");
 
 contactform.addEventListener("submit", async (e) => {
   e.preventDefault();
@@ -60,20 +60,4 @@ contactform.addEventListener("submit", async (e) => {
     document.location.replace("/feedback");
   }
 
-  //   let yxz = new XMLHttpRequest();
-  //   yxz.open("POST", "/feedback");
-  //   yxz.setRequestHeader("content-type", "application/json");
-  //   yxz.onload = function () {
-  //     console.log(yxz.responseText);
-  //     if (yxz.responseText == "sucess") {
-  //       Swal.fire("email is sent");
-  //       name.value = "";
-  //       email.value = "";
-  //       text.value = "";
-  //       message.value = "";
-  //     } else {
-  //       Swal.fire("something went wrong!!!");
-  //     }
-  //   };
-  //   yxz.send(JSON.stringify(feedbackData));
 });
