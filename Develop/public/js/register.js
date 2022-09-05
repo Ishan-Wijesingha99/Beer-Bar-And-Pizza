@@ -2,11 +2,11 @@ const registerForm = document.querySelector(".login-card");
 registerForm.addEventListener("submit", async (event) => {
   event.preventDefault();
 
-  const email = document.querySelector("#email").value.trim();
-  const name = document.querySelector("#name").value.trim();
-  const address = document.querySelector("#address").value.trim();
-  const mobile = document.querySelector("#mobile").value.trim();
-  const password = document.querySelector("#password").value;
+  const email = document.querySelector("#register-email").value.trim();
+  const name = document.querySelector("#register-name").value.trim();
+  const address = document.querySelector("#register-address").value.trim();
+  const mobile = document.querySelector("#register-mobile").value.trim();
+  const password = document.querySelector("#register-password").value;
   const repeatPassword = document.querySelector("#repeatPassword").value;
   if (password === repeatPassword) {
     const response = await fetch("/register", {
