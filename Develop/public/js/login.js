@@ -23,7 +23,7 @@ const loginFormHandler = async (event) => {
     console.log(data);
 
     if (response.ok) {
-      document.location.replace("/");
+      document.location.replace("/menu");
       Swal.fire({
         position: "top-end",
         icon: "success",
