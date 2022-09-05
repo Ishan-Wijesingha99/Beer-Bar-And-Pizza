@@ -33,3 +33,19 @@ List of contributors is as followed:<br />
 [Mina Ghaly ](https://github.com/Master20100)<br />
 [Sudheer Kandula](https://github.com/sudheer313)<br />
 [James Little](https://github.com/Jamlit37)
+
+## Screenshots of Application
+![screenshot-1](./Develop/public/images/readme-imgs/screenshot-1.png)
+![screenshot-2](./Develop/public/images/readme-imgs/screenshot-2.png)
+![screenshot-3](./Develop/public/images/readme-imgs/screenshot-3.png)
+![screenshot-4](./Develop/public/images/readme-imgs/screenshot-4.png)
+![screenshot-5](./Develop/public/images/readme-imgs/screenshot-5.png)
+![screenshot-6](./Develop/public/images/readme-imgs/screenshot-6.png)
+![screenshot-7](./Develop/public/images/readme-imgs/screenshot-7.png)
+![screenshot-8](./Develop/public/images/readme-imgs/screenshot-8.png)
+![screenshot-9](./Develop/public/images/readme-imgs/screenshot-9.png)
+![screenshot-10](./Develop/public/images/readme-imgs/screenshot-10.png)
+![screenshot-11](./Develop/public/images/readme-imgs/screenshot-11.png)
+![screenshot-12](./Develop/public/images/readme-imgs/screenshot-12.png)
+![screenshot-13](./Develop/public/images/readme-imgs/screenshot-13.png)
+![screenshot-14](./Develop/public/images/readme-imgs/screenshot-14.png)

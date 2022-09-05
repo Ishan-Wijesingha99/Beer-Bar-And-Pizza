@@ -30,6 +30,8 @@
                         body: JSON.stringify({id: element.id.slice(-1)}),
                         headers: { "Content-Type": "application/json" },
                     });
+
+                    swal.fire('Pizza added to cart!')
                 } catch(err) {
                     console.log(err)
                 }
