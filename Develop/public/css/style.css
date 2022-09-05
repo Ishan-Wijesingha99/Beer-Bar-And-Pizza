@@ -238,6 +238,18 @@
 
 .contact-us-btn-flex-container {
   display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+@media only screen and (max-width: 1190px) {
+  .contact-us-btn-flex-container {
+    flex-direction: column;
+  }
+
+  
 }
 
 #findstore, #feedback, #media, #investor {
